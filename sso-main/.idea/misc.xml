@@ -7,6 +7,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../sso-login/pom.xml" />
         <option value="$PROJECT_DIR$/../sso-demo1/pom.xml" />
+        <option value="$PROJECT_DIR$/../sso-demo2/pom.xml" />
+        <option value="$PROJECT_DIR$/../pom.xml" />
       </list>
     </option>
   </component>

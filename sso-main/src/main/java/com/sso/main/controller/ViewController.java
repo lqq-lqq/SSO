@@ -1,6 +1,5 @@
 package com.sso.main.controller;
 
-import com.sso.main.com.sso.main.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
@@ -19,7 +18,7 @@ public class ViewController {
 
     @Autowired
     private RestTemplate restTemplate;
-    private final String LOGIN_INFO_ADDRESS="http://login.lqq.com:8000/login/info?token=";
+    private final String LOGIN_INFO_ADDRESS="http://login.lqq.com:8000/login/info?token=";  //根据自身本地映射更改
 
     @GetMapping(value = "/index")
     public String toIndex(@CookieValue(required = false, value = "TOKEN") Cookie cookie, HttpSession session) {

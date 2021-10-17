@@ -4,16 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db06b35e-ec1e-4dd1-a1f1-cfab21c6f036" name="Changes" comment="" />
+    <list default="true" id="7b62229d-945a-4b0d-ab8f-4bd34bdfc14b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../sso-main/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sso-demo1/src/main/java/com/sso/demo1/Demo1App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sso-demo1/src/main/java/com/sso/demo1/Demo1App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sso-demo1/src/main/java/com/sso/demo1/controller/ViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sso-demo1/src/main/java/com/sso/demo1/controller/ViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sso-demo1/target/classes/templates/demo1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../sso-demo1/target/classes/templates/demo1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sso-main/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sso-main/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sso-main/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sso-main/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sso-main/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sso-main/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sso-main/src/main/java/com/sso/main/com/sso/main/domain/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sso-main/src/main/java/com/sso/main/controller/ViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sso-main/src/main/java/com/sso/main/controller/ViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sso-main/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/../sso-main/src/main/resources/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sso-main/target/classes/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/../sso-main/target/classes/templates/main.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$PROJECT_DIR$/../../Javatools/apache-maven-3.8.2" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../Javatools/apache-maven-3.8.2" />
         <option name="userSettingsFile" value="D:\Javatools\apache-maven-3.8.2\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -21,7 +39,8 @@
   <component name="MavenRunner">
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
-  <component name="ProjectId" id="1zdE1Q22peDPFRMMUjEHYF9C8UP" />
+  <component name="ProjectId" id="1zdNz1wLgWhCNqOT9a9yNNnSACt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -29,19 +48,34 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="db06b35e-ec1e-4dd1-a1f1-cfab21c6f036" name="Changes" comment="" />
-      <created>1634469348865</created>
+      <changelist id="7b62229d-945a-4b0d-ab8f-4bd34bdfc14b" name="Changes" comment="" />
+      <created>1634474263825</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1634469348865</updated>
-      <workItem from="1634469361637" duration="8000" />
+      <updated>1634474263825</updated>
+      <workItem from="1634474265266" duration="13000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

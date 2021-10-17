@@ -6,6 +6,7 @@
 </head>
 <body>
     <h1>欢迎来到首页</h1>
+    <!--www.lqq.com是本地映射，根据自身本地映射更改-->
     <a th:if="${session.loginUser==null}" href="http://login.lqq.com:8000/view/login?target=http://www.lqq.com:8001/view/index">登录</a>
     <a th:unless="${session.loginUser==null}" href="#">退出</a>
     <p th:unless="${session.loginUser==null}">
