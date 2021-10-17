@@ -7,6 +7,7 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 public class Demo1App {
+    //qxx的测试
     public static void main(String[] args) {
         SpringApplication.run(Demo1App.class,args);
     }
