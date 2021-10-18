@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo2</title>
+</head>
+<body>
+<h1>欢迎来到demo2页面</h1>
+<a th:if="${session.loginUser==null}" href="http://login.lqq.com:8000/view/login?target=http://demo1.lqq.com:8002/view/index">登录</a>
+<a th:unless="${session.loginUser==null}" href="http://login.lqq.com:8000/logout?target=http://demo1.lqq.com:8002/view/index">退出</a>
+<p th:unless="${session.loginUser==null}">
+    <!--<span style="color: red" th:text="${session.loginUser.username}+'已登陆'"></span>-->
+    <span style="color: red" th:text="${session.loginUser.username}+' 已登陆'"></span>
+</p>
+<a href="http://www.lqq.com:8001/view/index">回到首页</a>
+</body>
+</html>
