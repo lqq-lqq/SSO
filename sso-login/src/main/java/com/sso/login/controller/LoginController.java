@@ -39,14 +39,12 @@ public class LoginController {
             String token= UUID.randomUUID().toString();
             Cookie cookie=new Cookie("TOKEN",token);
             cookie.setDomain("lqq.com"); //设置后缀域名
-            //cookie.setDomain("lqqq.com");
             response.addCookie(cookie);
             LoginCacheUtils.loginUser.put(token,person.get());
         } else {  //登陆失败
             session.setAttribute("msg","用户名或密码错误");
             return "index";
         }
-
         return "redirect:"+target;
     }
     @GetMapping("/info")    //请求得到用户信息

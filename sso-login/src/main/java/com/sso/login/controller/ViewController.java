@@ -12,14 +12,14 @@ import javax.servlet.http.HttpSession;
 
 //页面跳转逻辑
 @Controller
-@RequestMapping(value = "/view")
+@RequestMapping(value = "/view",method = {RequestMethod.POST,RequestMethod.GET})
 public class ViewController {
     //登陆界面
     @GetMapping(value = "/login")
     public String toLogin(@RequestParam(required = false,defaultValue = "") String target,
                           HttpSession session, @CookieValue(required = false,value = "TOKEN") Cookie cookie){
         if(StringUtils.isEmpty(target)){     //如果到达登陆界面url没有带target参数，则登陆完成后默认回到首页
-            target="http://www.lqq.com:8001";  //默认返回主页面
+            target="http://www.lqq.com:8001/view/index";  //默认返回主页面
         }
         if(cookie!=null){
             String value=cookie.getValue();
