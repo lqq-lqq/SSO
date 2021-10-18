@@ -5,6 +5,9 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../sso-demo2/pom.xml" />
+        <option value="$PROJECT_DIR$/../sso-login/pom.xml" />
+        <option value="$PROJECT_DIR$/../sso-main/pom.xml" />
       </list>
     </option>
   </component>

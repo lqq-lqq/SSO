@@ -32,4 +32,8 @@ public class ViewController {
         session.setAttribute("target",target);
         return "index";
     }
+    @GetMapping(value = "/sign-up")
+    public String toSignUp(){
+        return "sign-up";
+    }
 }

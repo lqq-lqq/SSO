@@ -6,8 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="untitled" />
         <module name="sso-demo1" />
+        <module name="untitled (1)" />
+        <module name="untitled (2)" />
       </profile>
     </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="sso-demo1" options="-parameters" />
+      <module name="untitled" options="-parameters" />
+      <module name="untitled (1)" options="-parameters" />
+      <module name="untitled (2)" options="-parameters" />
+    </option>
   </component>
 </project>
