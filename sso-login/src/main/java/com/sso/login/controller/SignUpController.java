@@ -18,6 +18,10 @@ public class SignUpController {
     private UserRepository userRepository;
     @PostMapping("")
     public String toSign(HttpServletRequest request,HttpSession session){
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        System.out.println("aaaaaaaaaa  "+username);
+        System.out.println(password);
 //        //获取用户和密码
 //        String username = request.getParameter("username");
 //        String password = request.getParameter("password");
