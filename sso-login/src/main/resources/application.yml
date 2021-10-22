@@ -1,4 +1,12 @@
 # 登陆界面
 server:
   port: 8000
-
+spring:
+  data:
+    mongodb:
+      authentication-database: admin
+      database: user
+      username: root
+      password: "123456" #注意这⾥要⽤引号把密码括起来
+      host: 127.0.0.1
+      port: 27017
