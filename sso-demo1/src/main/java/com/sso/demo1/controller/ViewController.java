@@ -18,7 +18,7 @@ public class ViewController {
 
     @Autowired
     private RestTemplate restTemplate;
-    private final String LOGIN_INFO_ADDRESS="http://login.lqq.com:8000/login/info?token=";  //根据自身本地映射更改
+    private final String LOGIN_INFO_ADDRESS="http://login.lqq.com:8000/info?token="; //根据自身本地映射更改
 
     @GetMapping(value = "/index")
     public String toIndex(@CookieValue(required = false, value = "TOKEN") Cookie cookie, HttpSession session) {
@@ -27,6 +27,9 @@ public class ViewController {
             if (!StringUtils.isEmpty(token)) { //向login寻找用户信息的url请求
                 Map result = restTemplate.getForObject(LOGIN_INFO_ADDRESS + token, Map.class);
                 session.setAttribute("loginUser",result);
+                if(result==null){
+                    return "redirect:"+"http://login.lqq.com:8000/view/login?target=http://demo1.lqq.com:8002/view/index";
+                }
             }
         }
         return "demo1";

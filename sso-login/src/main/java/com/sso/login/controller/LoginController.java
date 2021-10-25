@@ -1,6 +1,7 @@
 package com.sso.login.controller;
 
-import com.sso.login.com.sso.login.utils.LoginCacheUtils;
+import com.sso.login.utils.LoginCacheUtils;
+import com.sso.login.utils.JWTUtils;
 import com.sso.login.domain.User;
 import com.sso.login.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,16 +16,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.UUID;
+import java.util.Map;
+import java.util.HashMap;
 
 @Controller
-@RequestMapping(value = "/login",method = {RequestMethod.POST,RequestMethod.GET})
+@RequestMapping(value = "",method = {RequestMethod.POST,RequestMethod.GET})
 public class LoginController {
     @Autowired
     private UserRepository userRepository;
-    @PostMapping("")
+    JWTUtils JWTtoken = new JWTUtils();
+    @PostMapping("/login")
     public String doLogin(HttpServletRequest request,HttpSession session, HttpServletResponse response){   //接受表单参数和重定向地址
         String target=(String) session.getAttribute("target");  //拿到重定向的页面
-        //模拟从数据库中通过用户名和密码查找用户
+        //从数据库中通过用户名和密码查找用户
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         User user = userRepository.findByUsername(username);
@@ -34,7 +38,21 @@ public class LoginController {
         }
         else{
             if(password.equals(user.getPassword())){
-                String token= UUID.randomUUID().toString();
+                
+                /**保存用户信息**/
+                //将用户信息存为map为生成token作准备
+                Map<String, String> UserInfo = new HashMap<>();
+                UserInfo.put("username", user.getUsername());
+                UserInfo.put("password", user.getPassword());
+                /**
+                 * 生成token
+                 */
+                String token = JWTtoken.getToken(UserInfo);
+                System.out.println(token);//打印token,验证token生成成功。
+
+                /**
+                 * 生成cookie
+                 */
                 Cookie cookie=new Cookie("TOKEN",token);
                 cookie.setDomain("lqq.com"); //设置后缀域名
                 response.addCookie(cookie);
@@ -52,12 +70,19 @@ public class LoginController {
     @ResponseBody
     public ResponseEntity<User> getUserInfo(String token){
         if(!StringUtils.isEmpty(token)){
-            User user=LoginCacheUtils.loginUser.get(token);
-            return ResponseEntity.ok(user);
+            //验证token的有效性
+            if(JWTtoken.verify(token)){
+                //有效则将user信息返回给响应体
+                User user=LoginCacheUtils.loginUser.get(token);
+                return ResponseEntity.ok(user);
+            }
+            else{
+                //无效则将user信息置为无效，让其他界面重新登录
+                LoginCacheUtils.loginUser.remove(token);
+                //如何删token
+                return new ResponseEntity<>(null,HttpStatus.OK);
+            }
         }
-        else{
-            return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
-        }
-
+        return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
     }
 }

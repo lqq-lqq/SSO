@@ -18,7 +18,7 @@ public class ViewController {
 
     @Autowired
     private RestTemplate restTemplate;
-    private final String LOGIN_INFO_ADDRESS="http://login.lqq.com:8000/login/info?token=";  //根据自身本地映射更改
+    private final String LOGIN_INFO_ADDRESS="http://login.lqq.com:8000/info?token=";  //根据自身本地映射更改
 
     @GetMapping(value = "/index")
     public String toIndex(@CookieValue(required = false, value = "TOKEN") Cookie cookie, HttpSession session) {

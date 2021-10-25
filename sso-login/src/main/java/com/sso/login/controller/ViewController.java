@@ -1,6 +1,6 @@
 package com.sso.login.controller;
 
-import com.sso.login.com.sso.login.utils.LoginCacheUtils;
+import com.sso.login.utils.LoginCacheUtils;
 import com.sso.login.domain.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

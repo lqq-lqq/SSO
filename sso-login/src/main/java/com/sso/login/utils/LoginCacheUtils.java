@@ -1,4 +1,4 @@
-package com.sso.login.com.sso.login.utils;
+package com.sso.login.utils;
 
 import com.sso.login.domain.User;
 
